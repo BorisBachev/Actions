@@ -9,6 +9,11 @@ books = [
     {"id": 3, "title": "The Hobbit", "author": "J.R.R. Tolkien"}
 ]
 
+# Route for health check
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({'message': 'Server is up and running'})
+
 # Route to get all books
 @app.route('/books', methods=['GET'])
 def get_books():
