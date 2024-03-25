@@ -21,8 +21,8 @@ jobs:
         run: pip install -r requirements.txt
 
       # Add tests here
-      # - name: Run tests
-      #   run: pytest
+      - name: Run tests
+        run: pytest
 
   docker_build_and_push:
     needs: build
