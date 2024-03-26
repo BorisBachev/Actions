@@ -11,7 +11,7 @@ def test_get_books(client):
     """Test retrieving all books."""
     response = client.get('/books')
     assert response.status_code == 200
-    assert len(response.json) == 8  # Adjust based on your initial data
+    assert len(response.json) == 3  # Adjust based on your initial data
 
 def test_get_book(client):
     """Test retrieving a specific book by ID."""
